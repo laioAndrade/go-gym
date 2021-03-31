@@ -35,19 +35,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | Testes de Aceitação (TA) |  |
 | ----------- | --------- |
 | **Código**      | **Descrição** |
-| **TA01.01** | 
-O administrador informa, na tela Cadastrar, todos os dados para registrar-se corretamente, ao clicar em salvar ele é notificado com uma mensagem de sucesso. Mensagem: Cadastro realizado com sucesso.
-
- |
-| **TA01.02** | 
-O administrador informa, na tela Registrar, os dados para registrar-se incorretamente, ao clicar em salvar ele é notificado com uma mensagem de erro. Mensagem: Cadastro não realizado, o campo “xxxx” não foi informado corretamente.
-
- |
-| **TA01.03** | 
-O aluno informa, na tela Login, os dados para logar corretamente, ao clicar em entrar ele é direcionado para página inicial.
-
- |
-| **TA01.04** | 
-O aluno  informa, na tela Login, os dados para logar incorretamente, ao clicar em entrar ele é notificado com uma mensagem de erro.
-
- |
+| **TA01.01** | O administrador informa, na tela Cadastrar, todos os dados para registrar-se corretamente, ao clicar em salvar ele é notificado com uma mensagem de sucesso. Mensagem: Cadastro realizado com sucesso.|
+| **TA01.02** | O administrador informa, na tela Registrar, os dados para registrar-se incorretamente, ao clicar em salvar ele é notificado com uma mensagem de erro. Mensagem: Cadastro não realizado, o campo “xxxx” não foi informado corretamente.|
+| **TA01.03** | O aluno informa, na tela Login, os dados para logar corretamente, ao clicar em entrar ele é direcionado para página inicial.|
+| **TA01.04** | O aluno  informa, na tela Login, os dados para logar incorretamente, ao clicar em entrar ele é notificado com uma mensagem de erro.|
