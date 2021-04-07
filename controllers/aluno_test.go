@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"bytes"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -24,6 +25,31 @@ func TestGetAluno(t *testing.T) {
 	}
 
 	expected := `{"data":[{"ID":0,"DeletedAt":null,"id":1,"nome":"laio","username":"laioAlencar","senha":"123456","idade":23,"sexo":"masculino","CreatedAt":"2021-04-06T19:05:48.08-03:00","UpdatedAt":"2021-04-06T19:31:04.303-03:00"}]}`
+
+	if w.Body.String() != expected {
+		t.Errorf("requisição retornou body inesperado: : obtido %v  esperado %v", w.Body.String(), expected)
+	}
+}
+
+func TestCreateAluno(t *testing.T) {
+	router := gin.Default()
+	database.Initialize()
+
+
+	var jsonStr = []byte(`{"nome":"laio","username":"laio1","senha":"123456","idade":23,"sexo":"masculino"}`)
+
+	router.POST("/", CreateAluno)
+
+	w := httptest.NewRecorder()
+	req, _ := http.NewRequest("POST", "/", bytes.NewBuffer(jsonStr))
+	req.Header.Set("Content-Type", "application/json")
+	router.ServeHTTP(w, req)
+
+	if status := w.Code; status != http.StatusOK {
+		t.Errorf("requisição retornou status errado: obtido %v  esperado %v", status, http.StatusOK)
+	}
+
+	expected := `{"data":"usuario cadastrado com sucesso"}`
 
 	if w.Body.String() != expected {
 		t.Errorf("requisição retornou body inesperado: : obtido %v  esperado %v", w.Body.String(), expected)
