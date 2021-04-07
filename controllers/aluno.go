@@ -45,7 +45,7 @@ func CreateAluno(c *gin.Context){
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"data": aluno})
+	c.JSON(http.StatusOK, gin.H{"data": "usuario cadastrado com sucesso"})
 }
 
 func GetAlunos(c *gin.Context) {

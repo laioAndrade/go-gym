@@ -1,8 +1,6 @@
 package models
 
 import (
-	"time"
-
 	"gorm.io/gorm"
 )
 
@@ -14,6 +12,6 @@ type Aluno struct {
 	Password string `json:"senha" gorm:"not null"`
 	Age uint8	`json:"idade" gorm:"not null"`
 	Gender string `json:"sexo" gorm:"not null"`
-	CreatedAt    time.Time
-  UpdatedAt    time.Time
+	// CreatedAt    time.Time
+  // UpdatedAt    time.Time
 }
