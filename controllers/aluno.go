@@ -51,7 +51,7 @@ func CreateAluno(c *gin.Context){
 func GetAlunos(c *gin.Context) {
 	alunos := repositories.GetAlunos()
 
-	c.JSON(http.StatusCreated, gin.H{"data": alunos})
+	c.JSON(http.StatusOK, gin.H{"data": alunos})
 }
 
 func GetAluno(c *gin.Context) {
